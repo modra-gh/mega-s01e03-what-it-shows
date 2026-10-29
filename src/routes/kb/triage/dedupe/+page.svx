@@ -1,0 +1,35 @@
+---
+layout: runbook
+title: 'Triage: duplicate reports'
+owner: support desk
+status: proposed
+reviewed: '2026-10-29'
+---
+
+<script>
+  import DedupeExplorer from '#lib/kb/DedupeExplorer.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+</script>
+
+A busy morning brings hundreds of reports about the same thing. We keep one ticket per issue
+and merge every duplicate into it, so engineering sees one thread with a count.
+
+## The rule
+
+A report is a duplicate when evidence establishes the **same failure mechanism**, not merely the same subject. This is proposed replacement guidance under [decision 0002](/kb/decisions/0002-dedupe-by-cause); [decision 0001](/kb/decisions/0001-dedupe-by-subject) is preserved as history:
+
+1. Read the body and identify the product, tenant, channel, and booking-form version.
+2. Look up tenant locale and reproduce expected versus actual behavior on that input path.
+3. Compare the demonstrated cause with an existing ticket. Merge only when it agrees; otherwise open a separate ticket or hold the report for investigation. Deduplicate export rows by report ID.
+
+<Callout>
+Subjects and intake tags help find candidates. They do not establish a shared cause. See the [#4471 review](/kb/incidents/4471-review) for the demonstrated failure of subject-only merging.
+</Callout>
+
+## Try it
+
+<DedupeExplorer />
+
+## When you are unsure
+
+Do not merge an unknown tenant or an unexplained one-day shift by guesswork. Record the uncertainty and request the missing context. Read the body even when the automated classifier returns a known cause.

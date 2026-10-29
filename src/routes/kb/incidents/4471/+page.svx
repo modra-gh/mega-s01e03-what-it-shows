@@ -1,0 +1,35 @@
+---
+layout: runbook
+title: '#4471 · dates parse mm/dd in eu locales'
+owner: support desk
+status: reviewed
+reviewed: '2026-10-29'
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+</script>
+
+Since April, people have told us their bookings land on the wrong day: a month flipped. By
+4 October the desk had **412 reports**.
+
+**Merged as one issue, but two causes are visible.** The shared parser reads dates month first. Booking-v3 also displays a month-first hint while its form reads the tenant's order. See the [signed review](/kb/incidents/4471-review) for separate tickets, counts, and unresolved timing symptoms. This export does not establish that either fix has shipped.
+
+<Callout>
+The known label does not prove a single cause. Read the computed table and the report details together.
+</Callout>
+
+## What was merged
+
+<CauseTable ticket={4471} />
+
+## Since April
+
+<QueueTimeline ticket={4471} />
+
+## Lessons
+
+- Verify a common failure mechanism before merging. Count each report ID once.
+- Separate receipt time from merge time; a desk processing spike is not an arrival spike.

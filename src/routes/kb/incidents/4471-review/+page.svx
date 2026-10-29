@@ -1,0 +1,40 @@
+---
+layout: runbook
+title: '#4471 review: two date problems hidden in one ticket'
+owner: modra-gh
+status: investigated
+reviewed: '2026-10-29'
+signature: modra-gh
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import InvestigationSummary from '#lib/kb/InvestigationSummary.svelte';
+  import DedupeExplorer from '#lib/kb/DedupeExplorer.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+The original incident combined two different input paths. The shared parser assumes month first; booking-v3 displays a month-first hint while its form reads in the tenant's order. A parser fix alone does not fix the misleading hint.
+
+Tenant locale and booking-form version determine the expected input order. Browser locale and the intake tag can disagree with that contract. Read the report body and reproduce the path before deciding a report is a duplicate.
+
+<InvestigationSummary />
+
+## Counts from the supplied cause model
+
+<CauseTable ticket={4471} />
+
+## Queue history
+
+<QueueTimeline ticket={4471} />
+
+## Why subject matching fails
+
+The interactive cases below show that matching subjects can hide different problems, and different subjects can describe the same problem. An unknown tenant needs investigation, not an automatic merge.
+
+<DedupeExplorer />
+
+See the [replacement triage decision](/kb/decisions/0002-dedupe-by-cause) and the updated [triage procedure](/kb/triage/dedupe). Decision 0001 remains unchanged as the historical record.
+
+<RenderStamp {signature} />
