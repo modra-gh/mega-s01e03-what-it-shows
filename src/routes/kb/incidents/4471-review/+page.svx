@@ -2,7 +2,7 @@
 layout: runbook
 title: '#4471 review: two date problems hidden in one ticket'
 owner: modra-gh
-status: investigated
+status: resolved
 reviewed: '2026-10-29'
 signature: modra-gh
 ---
@@ -20,6 +20,12 @@ The original incident combined two different input paths. The shared parser assu
 Tenant locale and booking-form version determine the expected input order. Browser locale and the intake tag can disagree with that contract. Read the report body and reproduce the path before deciding a report is a duplicate.
 
 <InvestigationSummary />
+
+## Engineering outcome after the first submission
+
+The course desk's engineering update reports “#4471 · closed 05 oct”. It marks parser **FIXED**: `fix(dates): parse dd/mm for eu locales`. The parser ticket is therefore closed as completed.
+
+It marks hint **WON'T FIX** because the **booking-v3 form was retired**. The hint ticket is closed as not planned, rather than falsely recording a hint fix. The report allocations below remain the October 4 snapshot; these later outcomes come from the [course engineering update](https://hq.mega.dev/challenges/what-it-shows#engineering-update), not from that export. The update gives no named time zone or year in its closure label, and I have not independently tested a production deployment.
 
 ## Counts from the supplied cause model
 

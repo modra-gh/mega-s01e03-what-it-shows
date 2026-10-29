@@ -28,3 +28,7 @@ Expected: the input contract and parser agree on the tenant's date order. Actual
 Parse dates according to an explicit tenant input contract and test ambiguous and unambiguous dates across day-first locales and supported channels. Investigate the five anomalous bodies separately. Keep the booking-v3 hint issue separate: fixing shared parsing alone cannot correct misleading form text. No fix is claimed as shipped.
 
 KB review source: `src/routes/kb/incidents/4471-review/+page.svx`. Rendered desk page: `build/kb/incidents/4471-review.html`.
+
+## Engineering outcome
+
+The [course desk's engineering update](https://hq.mega.dev/challenges/what-it-shows#engineering-update), exposed after the first submission, reports “#4471 · closed 05 oct” and parser FIXED: `fix(dates): parse dd/mm for eu locales`. Close this ticket as completed on that evidence. This is a desk-reported resolution, not an independently executed production test. The earlier export and counts remain historical evidence.

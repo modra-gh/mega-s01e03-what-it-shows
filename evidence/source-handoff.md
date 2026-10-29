@@ -11,3 +11,9 @@ Five desk-noted IDs remain within parser in the supplied classification. Their b
 Original timestamps carry +01:00 or +02:00. No named desk time zone is declared. Receipt and merge times are distinct. First receipt: 2026-04-01T09:12:00+01:00; first merge: 2026-07-02T09:03:00+02:00. The July 2 merge batch contains 184 reports; it is not an arrival count.
 
 Static import/build calculations are not a connection to a live queue. Reassess when new evidence arrives. No production parser/form implementation or deployed fix was provided.
+
+## Source DESK_UPDATE
+
+After the first submission, the authenticated Challenge page at https://hq.mega.dev/challenges/what-it-shows exposed an engineering update. An independent worker inspected only that supplied section. Exact lines: “#4471 · closed 05 oct”; “parser FIXED fix(dates): parse dd/mm for eu locales”; “hint WON’T FIX booking-v3 form retired”. No time zone or year appears in the date label. The source reports outcomes but supplies no production implementation test.
+
+Combined finding: retain KB_EXPORT's historical counts, close parser as completed, close hint as not planned, and record the newer desk outcome in the KB. The first closure of both tickets as completed was rejected; the new source distinguishes their resolutions.

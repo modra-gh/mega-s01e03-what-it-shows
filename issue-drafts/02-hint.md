@@ -28,3 +28,7 @@ Expected: the hint, validation, and reader use the same date contract. Actual re
 Localize the form hint and align it with validation and parsing. Test day-first booking-v3 tenants with different browser locales, alongside booking-v2 and app/email paths. Keep this issue separate from the shared parser correction. No fix is claimed as shipped.
 
 KB review source: `src/routes/kb/incidents/4471-review/+page.svx`. Rendered desk page: `build/kb/incidents/4471-review.html`.
+
+## Engineering outcome
+
+The [course desk's engineering update](https://hq.mega.dev/challenges/what-it-shows#engineering-update), exposed after the first submission, reports hint WON'T FIX: booking-v3 form retired. Close this ticket as not planned, not as completed. This is retirement of the affected form, not a shipped hint correction. The earlier export and counts remain historical evidence.

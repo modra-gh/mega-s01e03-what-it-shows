@@ -32,3 +32,7 @@ Open `/kb/incidents/4471-review` in the preview. Its actual generated HTML is `b
 2. Booking-v3 date hint conflicts with tenant input order — 33 reports
 
 The bodies are under issue-drafts/. The KB's operational guidance is marked proposed pending desk acceptance; the old accepted decision is preserved.
+
+## Later desk outcome
+
+The course page's engineering update reports parser FIXED and hint WON'T FIX because booking-v3 was retired. Parser closes as completed, hint as not planned. This supersedes the initial rationale that both could close merely because the triage deliverable was complete; the course rejected that closure. Historical export counts remain unchanged.
