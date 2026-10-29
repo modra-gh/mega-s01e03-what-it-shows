@@ -1,8 +1,8 @@
 # S01E03 — prepared delivery
 
-Proposed public repository: `modra-gh/mega-s01e03-what-it-shows`.
+Public repository: https://github.com/modra-gh/mega-s01e03-what-it-shows
 
-This directory contains the supplied support KB, the signed review, a proposed replacement triage decision, two issue drafts, reproducible count evidence, and the actual built desk pages. The GitHub issue links in the review are reserved for issues 1 and 2 in the proposed new repository; they will not resolve until publication is approved and complete.
+This directory contains the supplied support KB, the signed review, a proposed replacement triage decision, the two published issue bodies, reproducible count evidence, and the actual built desk pages. The review links to published issues 1 and 2. The course accepted both tickets on the first submission. Closing them records completion of this investigation/reporting deliverable, not shipment of production fixes.
 
 ## Reproduce
 
